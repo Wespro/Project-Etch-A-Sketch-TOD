@@ -23,3 +23,13 @@ function addNumOfRowsOfNumOfDivs() {
 }
 
 addNumOfRowsOfNumOfDivs();
+
+//Eventlistner for the hover effect of painting
+window.addEventListener("mouseover", addBackgroundColor);
+
+function addBackgroundColor(e) {
+  if (!e.target.classList.contains("square")) {
+    return;
+  }
+  e.target.classList.add("colored");
+}
